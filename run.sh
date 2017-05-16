@@ -30,10 +30,10 @@ go get github.com/mattn/goveralls
 echo "mode: count" > profile.cov
 err=0
 
-for dir in $(find . -maxdepth 10 -not -path './.git*' -not -path '*/_*' -type d); do
+for dir in $(find . -maxdepth 10 -not -path './.git*' -not -path '*/_*' -not -path './vendor*' -type d); do
   if ls $dir/*.go &> /dev/null; then
     echo "Parsing directory: $dir"
-    go test --covermode=count -coverprofile=profile.out $dir || err=1
+    go test -v -tags=unit -covermode=count -coverprofile=profile.out $dir || err=1
     if [ -f profile.out ]; then
       cat profile.out | grep -v "mode: count" >> profile.cov
       rm profile.out
