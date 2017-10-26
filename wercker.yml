@@ -1,4 +1,8 @@
 box: wercker/default
 build:
   steps:
+    - script:
+        name: do not build
+        code: printenv
+  
     - validate-wercker-step
