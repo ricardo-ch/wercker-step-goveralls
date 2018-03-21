@@ -12,7 +12,7 @@ fi
 echo "Git branch: $GIT_BRANCH"
 
 version=$(go version)
-regex="(go[0-9].[0-9].[0-9])"
+regex="(go[0-9]+\.[0-9]+(\.[0-9]+)?)"
 if [[ $version =~ $regex ]]; then
   version=${BASH_REMATCH[1]}
 else

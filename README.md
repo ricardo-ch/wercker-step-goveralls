@@ -37,6 +37,10 @@ token    | string |                         | Your Coveralls repository token.
 
 ## Changelog
 
+### 1.1.1
+
+- Allow go version retrieval for go1.10
+
 ### 1.0.0
 
 - Exclude "vendor" folder from scanned directories
