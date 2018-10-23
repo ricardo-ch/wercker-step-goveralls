@@ -35,7 +35,7 @@ for dir in $(find . -maxdepth 10 -not -path './.git*' -not -path '*/_*' -not -pa
     echo "Parsing directory: $dir"
     go test -v -tags=unit -covermode=count -coverprofile=profile.out $dir || err=1
     if [ -f profile.out ]; then
-      cat profile.out | grep -v "mode: count" >> profile.cov
+      cat profile.out | grep -v "mode: count" | grep -v "/mock_\w\+.go" >> profile.cov
       rm profile.out
     fi
   fi
