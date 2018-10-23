@@ -1,5 +1,5 @@
 name: goveralls
-version: 2.0.0
+version: 2.1.0
 description: uploads go coverage to coveralls
 keywords:
   - go

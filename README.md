@@ -31,11 +31,15 @@ build:
 
 ## Properties
 
-Name     | Type   | Default                 | Description
--------- | ------ | ----------------------- | -------------------
-token    | string |                         | Your Coveralls repository token.
+| Name  | Type   | Default | Description                      |
+| ----- | ------ | ------- | -------------------------------- |
+| token | string |         | Your Coveralls repository token. |
 
 ## Changelog
+
+### 2.1.0
+
+- Exclude mock_*.go files from the coverage profile
 
 ### 1.1.1
 
